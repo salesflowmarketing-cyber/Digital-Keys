@@ -1,0 +1,37 @@
+[project]
+name = "digital-keys"
+version = "2.0.0"
+description = "Digital Keys - a local-first encrypted credential vault and capability-token broker for AI agents"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Highline Digital" }]
+keywords = ["security", "credentials", "vault", "ai-agents", "local-first", "secrets"]
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Intended Audience :: Developers",
+    "Topic :: Security",
+    "Environment :: X11 Applications",
+]
+dependencies = ["argon2-cffi>=23.1", "cryptography>=42.0", "customtkinter", "Pillow>=10.0"]
+
+[project.urls]
+Homepage = "https://github.com/salesflowmarketing-cyber/Digital-Keys"
+Issues = "https://github.com/salesflowmarketing-cyber/Digital-Keys/issues"
+Changelog = "https://github.com/salesflowmarketing-cyber/Digital-Keys/blob/main/CHANGELOG.md"
+
+[project.scripts]
+dk = "digital_keys.cli:main"
+digital-keys = "digital_keys.cli:main"
+hlv = "digital_keys.cli:main"   # legacy alias (Highline Vault 1.x)
+hs = "digital_keys.cli:main"    # legacy alias (Highline Shield 1.0)
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = { find = { include = ["digital_keys*"] } }

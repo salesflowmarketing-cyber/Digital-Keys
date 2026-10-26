@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual environments
+.venv/
+venv/
+digital-keys-venv/
+highline-vault-venv/
+
+# Vault / secrets
+*.enc.json
+vault.json
+*.json.bak
+.env
+.env.*
+
+# Backup files
+*.bak
+*.original
+
+# Tests
+.pytest_cache/
+.coverage
+htmlcov/
+
+# OS
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE
+.vscode/
+.idea/
+*.iml
